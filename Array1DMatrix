@@ -1,0 +1,22 @@
+#define ROW 3
+#define COL 3
+#include<stdio.h>
+int main()
+{
+	int arr[ROW] [COL],i,j;
+	printf("Input number\n");
+	printf("Eneter the Element of the Matrix(%d*%d) ROW-WISE: \n",ROW,COL);
+	for(i=0;i<ROW;i++)
+	for(j=0;j<COL;j++)
+	scanf("%d",&arr[i][j]);
+	printf("Output Value\n");
+	printf("The matrix you have enternd is: \n");
+	for(i=0;i<ROW;i++)
+	{
+		for(j=0;j<COL;j++)
+		printf("%5d",arr[i][j]);
+		printf("\n");
+	}
+	printf("\n");
+	return 0;
+}
