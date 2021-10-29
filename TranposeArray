@@ -1,0 +1,22 @@
+#define ROW 3
+#define COL 4
+#include<stdio.h>
+int main()
+{
+	int mat1[ROW][COL],mat2[COL][ROW],i,j;
+	printf("Input Number mat1(%dx%d) matrix\n",ROW,COL);
+	for(i=0;i<ROW;i++)
+	for(j=0;j<COL;j++)
+	scanf("%d",&mat1[i][j]);
+	for(i=0;i<COL;i++)
+	for(j=0;j<ROW;j++)
+	mat2[i][j]=mat1[i][j];
+	printf("The Result In Mat1 &m,mat2:\n");
+	for(i=0;i<COL;i++)
+	{
+		for(j=0;j<ROW;j++)
+		printf("%5d",mat2[i][j]);
+		printf("\n");
+	}
+	return 0;
+}
