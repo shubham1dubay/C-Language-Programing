@@ -1,0 +1,54 @@
+package overlorriding;
+class A
+{
+	int x,y,sum;
+	void show()
+	{
+		System.out.println("parent class show method");
+	}
+	A()
+	{
+		x=10;
+		y=20;
+		sum=x+y;
+	}
+	void showvalue()
+	{
+		System.out.println("x="+x+"y="+y);
+		System.out.println("Sum="+sum);
+	}
+}
+class B extends A
+{
+	int z;
+	B()
+	{
+		z=30;
+	}
+	void show(String s)
+	{
+		System.out.println("Child class show");
+	}
+	void showvalue()
+	{
+		System.out.println("z="+z);
+	}
+}
+public class overlorrding1 
+{
+
+	public static void main(String[] args) 
+	{
+		A a=new A();
+		B b=new B();
+		A ob;
+		a.show();
+		a.showvalue();
+		b.show("hello");
+		b.showvalue();
+		ob=a;
+		ob.show();
+		ob.showvalue();
+	}
+
+}
